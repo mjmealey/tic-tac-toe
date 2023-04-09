@@ -1,0 +1,8 @@
+import gameBoard from "./gameboard.js";
+
+function createGrid() {
+  const grid = gameBoard().gameGrid(3, 3);
+  return grid;
+}
+
+createGrid();
