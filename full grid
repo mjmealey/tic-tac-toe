@@ -1,0 +1,17 @@
+    if (
+      cellOne.innerHTML &&
+      cellTwo.innerHTML &&
+      cellThree.innerHTML &&
+      cellFour.innerHTML &&
+      cellFive.innerHTML &&
+      cellSix.innerHTML &&
+      cellSeven.innerHTML &&
+      cellEight.innerHTML &&
+      cellNine.innerHTML !== ""
+    ) {
+      displayEl.innerText =
+        "The arena is full! Please feel free to restart the game";
+      //call restart button function
+    } else {
+      displayEl.innerText = "";
+    }
