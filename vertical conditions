@@ -1,1 +1,22 @@
 
+  if (
+      (cellOne.innerHTML &&
+        cellFour.innerHTML &&
+        cellSeven.innerHTML === "O") ||
+      (cellTwo.innerHTML &&
+        cellFive.innerHTML &&
+        cellEight.innerHTML === "O") ||
+      (cellThree.innerHTML && cellSix.innerHTML && cellNine.innerHTML === "O")
+    ) {
+      displayEl.innerText = `That looks like 3 O's vertically! You win" + ${currentPlayer}`;
+    } else if (
+      (cellOne.innerHTML &&
+        cellFour.innerHTML &&
+        cellSeven.innerHTML === "X") ||
+      (cellTwo.innerHTML &&
+        cellFive.innerHTML === "X" &&
+        cellEight.innerHTML === "X") ||
+      (cellThree.innerHTML && cellSix.innerHTML && cellNine.innerHTML === "X")
+    ) {
+      displayEl.innerText = `That looks like 3 X's vertically! You win + ${currentPlayer}`;
+    }
