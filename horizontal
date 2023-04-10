@@ -1,0 +1,15 @@
+  //horizontal wins
+    if (
+      (cellOne.innerHTML && cellTwo.innerHTML && cellThree.innerHTML === "O") ||
+      (cellFour.innerHTML && cellFive.innerHTML && cellSix.innerHTML === "O") ||
+      (cellSeven.innerHTML && cellEight.innerHTML && cellNine.innerHTML === "O")
+    ) {
+      displayEl.innerText = `That looks like 3 O's horizontally! You win ${currentPlayer}`;
+    } else if (
+      (cellOne.innerHTML && cellTwo.innerHTML && cellThree.innerHTML === "X") ||
+      (cellFour.innerHTML && cellFive.innerHTML && cellSix.innerHTML === "X") ||
+      (cellSeven.innerHTML && cellEight.innerHTML && cellNine.innerHTML === "X")
+    ) {
+      displayEl.innerText = `That looks like 3 X's horizontally! You win ${currentPlayer}`;
+    }
+    else{displayEl.innerText = ""}
