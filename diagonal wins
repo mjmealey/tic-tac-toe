@@ -1,0 +1,13 @@
+    //diagonal wins
+    if (
+      (cellOne.innerHTML && cellFive.innerHTML && cellNine.innerHTML === "O") ||
+      (cellSeven.innerHTML && cellFive.innerHTML && cellThree.innerHTML === "O")
+    ) {
+      displayEl.innerText = `That looks like 3 O's diagonally! You win ${currentPlayer}`;
+    } else if (
+      (cellOne.innerHTML && cellFive.innerHTML && cellNine.innerHTML === "X") ||
+      (cellSeven.innerHTML && cellFive.innerHTML && cellThree.innerHTML === "X")
+    ) {
+      displayEl.innerText = `That looks like 3 X's diagonally! You win ${currentPlayer}`;
+      //restart button function
+    }
