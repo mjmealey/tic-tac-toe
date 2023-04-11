@@ -1,0 +1,90 @@
+body {
+  background-color: orange;
+  color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-left: 69.5vh;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2em;
+  background-color: black;
+  flex-wrap: wrap;
+  width: 400px;
+  padding: 20px;
+}
+
+#formContainer {
+  display: grid;
+  grid-template-columns: 2fr 00px 200px;
+  grid-template-rows: 300px 50px 400px;
+}
+
+.formContent {
+  display: flex;
+  gap: 20px;
+  grid-column: 1;
+  grid-row: 3;
+  margin-left: 12vh;
+  margin-bottom: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#enterName {
+  background-color: black;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  padding: 10px;
+  position: relative;
+  right: 12vh;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+#userName:hover {
+  background-color: aliceblue;
+  border-color: aliceblue;
+}
+
+#userName:valid {
+  border-color: green;
+  border-style: solid;
+}
+
+#enterName:hover {
+  border-color: grey;
+  background-color: grey;
+}
+
+#nameLabel {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1em;
+}
+
+.required {
+  font-size: 1em;
+  margin-bottom: 1vh;
+  position: relative;
+  left: 0.5vh;
+}
+
+#warning {
+  display: flex;
+  font-family: "Press Start 2P", cursive;
+  justify-content: center;
+  grid-row: 2/3;
+  position: relative;
+  bottom: 12vh;
+  font-weight: bolder;
+}
+
+#copyright {
+  display: flex;
+  margin-top: 27vh;
+  justify-content: center;
+  font-weight: bolder;
+  margin-right:5vh;
+}
