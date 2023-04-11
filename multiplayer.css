@@ -6,7 +6,7 @@ body {
 h1 {
   display: flex;
   justify-content: center;
-  margin-left: 66vh;
+  margin-left: 70vh;
   font-family: "Press Start 2P", cursive;
   font-size: 2em;
   background-color: black;
@@ -26,7 +26,7 @@ h1 {
   gap: 20px;
   grid-column: 1;
   grid-row: 3;
-  margin-left: 12vh;
+  margin-left: 13vh;
   margin-bottom: 10vh;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@ h1 {
 
 #copyright {
   display: flex;
-  margin-top: 27vh;
+  margin-top: 33vh;
   justify-content: center;
   font-weight: bolder;
   margin-right:2.5vh;
