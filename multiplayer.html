@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="multiplayer.js" defer></script>
+    <link rel="stylesheet" href="multiplayer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Bungee+Inline&family=Bungee+Shade&family=Cabin+Sketch&family=Montserrat+Subrayada&family=Oswald:wght@700&family=Piedra&family=Potta+One&family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <h1>Tic-Tac-Toe</h1>
+    <div id="gridContainer">
+      <div class="gridCells" id="cellOne"></div>
+      <div class="gridCells" id="cellTwo"></div>
+      <div class="gridCells" id="cellThree"></div>
+      <div class="gridCells" id="cellFour"></div>
+      <div class="gridCells" id="cellFive"></div>
+      <div class="gridCells" id="cellSix"></div>
+      <div class="gridCells" id="cellSeven"></div>
+      <div class="gridCells" id="cellEight"></div>
+      <div class="gridCells" id="cellNine"></div>
+    </div>
+    
+    <div id="formContainer">
+      
+      <form class="formContent" id="gameForm" method="get">
+    
+        <label class="formContent" for="name" id="nameLabel"
+          ><span class="required" aria-label="required"><strong>*</strong></span>Name:
+          <input
+            type="text"
+            id="userName"
+            name="user_name"
+            pattern="^[a-zA-Z0-9._-+!]?+$"
+            required
+          />
+        </label>
+        <button class="formContent" id="enterName" type="submit">Let's Play!</button>
+      </form>
+    </div>
+    <em><p id="warning">
+        The name you enter is what you will go by for this Tic-Tac-Toe
+        session
+      </p></em>
+  </body>
+
+  <footer>
+    <p id="copyright">&copy Jake Mealey 2023</p>
+  </footer>
+</html>
