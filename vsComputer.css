@@ -5,7 +5,7 @@ body {
 
 #mainContainer {
   display: grid;
-  grid-template-columns: 1300px 200px 750px 00px;
+  grid-template-columns: 1600px 200px 750px 00px;
   grid-template-rows: 200px 200px 00px 300px;
   font-family: "Press Start 2P", cursive;
 }
@@ -84,6 +84,6 @@ body {
   grid-row: 4;
   grid-column: 1;
   position: relative;
-  left: 60.5vh;
-  margin-top: 15vh;
+  left: 56vh;
+  margin-top: 21.9vh;
 }
