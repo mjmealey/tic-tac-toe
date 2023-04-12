@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="vsComputer.js" defer></script>
+    <link rel="stylesheet" href="vsComputer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Bungee+Inline&family=Bungee+Shade&family=Cabin+Sketch&family=Montserrat+Subrayada&family=Oswald:wght@700&family=Piedra&family=Potta+One&family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vs Computer</title>
+  </head>
+  <header>
+    
+  </header>
+  <body>
+    <div id="mainContainer">
+    <form id="computerForm" method="get">
+      <label class="formContent" for="name" id="nameLabel"
+        ><span id="nameRequired" aria-label="required">*</span> Name:</label
+      >
+      <input
+        id="userName"
+        type="text"
+        class="formContent"
+        name="user_name"
+        pattern="^[a-zA-Z0-9._-+!]?+$"
+        required
+      />
+      <label for="difficulty" class="formContent" id="difficultyLabel"><span id="difficultyRequired" aria-label="required">*</span>Difficulty: </label>
+      <select id="difficulty" class="formContent" id="difficultySelector" required>
+        <option class="difficultyMode" value="select">Select</option>
+        <option class="difficultyMode" value="easy">Easy</option>
+        <option class="difficultyMode" value="medium">Medium</option>
+        <option class="difficultyMode" value="hard">Hard</option>
+        <option class="difficultyMode" value="veryHard">Very Hard</option>
+        <option class="difficultyMode" value="nearlyImpossible">
+          Nearly Impossible
+        </option>
+      </select>
+      <button type="submit" id="start">Let's Play!</button>
+        
+    </form>
+    </div>
+  </body>
+  <footer>
+    <div id="footerContainer">
+    <em><p id="warning">
+      The name you enter is what you will go by for this Tic-Tac-Toe
+      session
+    </p></em>
+    <p id="copyright">&copy Jake Mealey 2023</p>
+  </footer>  
+      
+
+
+</html>

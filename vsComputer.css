@@ -1,0 +1,89 @@
+body {
+  background-color: orange;
+  color: white;
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: 1300px 200px 750px 00px;
+  grid-template-rows: 200px 200px 00px 300px;
+  font-family: "Press Start 2P", cursive;
+}
+
+#computerForm {
+  display: flex;
+  grid-column: 1/4;
+  gap: 25px;
+  grid-row: 4;
+  justify-content: center;
+  align-items: center;
+}
+
+#nameRequired {
+  position: relative;
+  bottom: 0.8vh;
+  left: 0.4vh;
+  margin-left:2.2rem;
+}
+
+#nameLabel {
+  position: relative;
+  left: 2vh;
+}
+
+#difficultyLabel {
+  position: relative;
+  left: 1.5vh;
+}
+
+#difficultyRequired {
+  position: relative;
+  bottom: 0.9vh;
+  right: 0.7vh;
+}
+
+#start {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1em;
+  height: 3vh;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+#start:hover {
+  background-color: grey;
+  border-color: orange;
+}
+
+#warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 20vh;
+  font-family: "Press Start 2P", cursive;
+}
+
+#footerContainer {
+  display: grid;
+  grid-template-columns: 1200px 200px 00px 300px;
+  grid-template-rows: 100px 100px 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyright {
+  grid-row: 4;
+  grid-column: 1;
+  position: relative;
+  left: 60.5vh;
+  margin-top: 15vh;
+}
