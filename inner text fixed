@@ -1,0 +1,70 @@
+
+  currentPlayerX.addEventListener("click", (e) => {
+    if (e.target.id === "currentPlayerX") {
+      if (currentPlayer === "O") {
+        const userMarkerX = prompt(
+          "Change Marker to X? x for yes o for no  Warning: This resets the game! "
+        );
+        if (userMarkerX === "x") {
+          displayEl.innerText = "Welcome to Tic-Tac-Toe!"
+          currentPlayer = "X";
+          cellOne.textContent = "";
+          cellTwo.textContent = "";
+          cellThree.textContent = "";
+          cellFour.textContent = "";
+          cellFive.textContent = "";
+          cellSix.textContent = "";
+          cellSeven.textContent = "";
+          cellEight.textContent = "";
+          cellNine.textContent = "";
+          currentPlayerX.style.backgroundColor = "grey";
+          currentPlayerX.style.borderColor = "grey";
+          currentPlayerO.style.backgroundColor = "lightgrey";
+          currentPlayerO.style.borderColor = "lightgrey";
+        } else if (userMarkerX === "o") {
+          currentPlayer = "O";
+        } else {
+          userMarkerX === null;
+        }
+      } else if (currentPlayer === "") {
+        currentPlayer = "X";
+        currentPlayerX.style.backgroundColor = "grey";
+        currentPlayerX.style.borderColor = "grey";
+      }
+    }
+  });
+
+  currentPlayerO.addEventListener("click", (e) => {
+    if (e.target.id === "currentPlayerO") {
+      if (currentPlayer === "X") {
+        const userMarkerO = prompt(
+          "Change Marker to O from X? o for yes x for no Warning: This resets the game!"
+        );
+        if (userMarkerO === "o") {
+          displayEl.innerText = "Welcome to Tic-Tac-Toe!"
+          currentPlayer = "O";
+          cellOne.textContent = "";
+          cellTwo.textContent = "";
+          cellThree.textContent = "";
+          cellFour.textContent = "";
+          cellFive.textContent = "";
+          cellSix.textContent = "";
+          cellSeven.textContent = "";
+          cellEight.textContent = "";
+          cellNine.textContent = "";
+          currentPlayerO.style.backgroundColor = "grey";
+          currentPlayerO.style.borderColor = "grey";
+          currentPlayerX.style.backgroundColor = "lightgrey";
+          currentPlayerX.style.backgroundColor = "lightgrey";
+        } else if (userMarkerO === "x") {
+          currentPlayer = "X";
+        } else {
+          userMarkerO === null;
+        }
+      } else if (currentPlayer === "") {
+        currentPlayer = "O";
+        currentPlayerO.style.backgroundColor = "grey";
+        currentPlayerO.style.borderColor = "grey";
+      }
+    }
+  });
