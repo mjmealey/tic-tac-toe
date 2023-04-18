@@ -1,0 +1,384 @@
+import gameBoard from "./gameBoard.js";
+const newGameBoard = gameBoard();
+
+const gameMoves = [];
+let currentPlayer = "";
+let currentDifficulty = "";
+
+function game() {
+  const cellOne = document.getElementById("col-0-0");
+  const cellTwo = document.getElementById("col-1-0");
+  const cellThree = document.getElementById("col-2-0");
+  const cellFour = document.getElementById("col-0-1");
+  const cellFive = document.getElementById("col-1-1");
+  const cellSix = document.getElementById("col-2-1");
+  const cellSeven = document.getElementById("col-0-2");
+  const cellEight = document.getElementById("col-1-2");
+  const cellNine = document.getElementById("col-2-2");
+  const displayEl = document.getElementById("displayEl");
+  const playerController = document.getElementById("playerController");
+  const difficultySlider = document.getElementsByClassName("difficultySlider");
+  const difficultyLabel = document.getElementById("difficultyLabel");
+  const start = document.getElementById("start");
+  const currentPlayerX = document.getElementById("currentPlayerX");
+  const currentPlayerO = document.getElementById("currentPlayerO");
+  const veryEasy = document.getElementById("veryEasy");
+  const easy = document.getElementById("easy");
+  const normal = document.getElementById("normal");
+  const hard = document.getElementById("hard");
+  const veryHard = document.getElementById("veryHard");
+  const nearlyImpossible = document.getElementById("nearlyImpossible");
+
+  const cellIds = [
+    "col-0-0",
+    "col-1-0",
+    "col-2-0",
+    "col-0-1",
+    "col-1-1",
+    "col-2-1",
+    "col-0-2",
+    "col-1-2",
+    "col-2-2",
+  ];
+
+  const currentPlayerIds = ["currentPlayerO", "currentPlayerX"];
+
+  currentPlayerIds.forEach((id) => {
+    const playerMarkers = document.getElementById(id);
+    playerMarkers.addEventListener("click", () => {});
+  });
+
+  cellOne.addEventListener("click", (e) => {
+    if (e.target.id === "col-0-0") {
+      if (currentPlayer === "O") {
+        cellOne.textContent = currentPlayer;
+        cellOne.setAttribute("id", "cellOneO");
+        console.log(cellOne.textContent);
+      } else if (currentPlayer === "X") {
+        cellOne.setAttribute("id", "cellOneX");
+        cellOne.textContent = currentPlayer;
+      }} 
+    if (cellOne.textContent === "") {
+      cellOne.textContent = currentPlayer;
+    } 
+  
+  });
+
+  cellTwo.addEventListener("click", (e) => {
+    if (e.target.id === "col-1-0") {
+      if (currentPlayer === "O") {
+        cellTwo.setAttribute("id", "cellTwoO");
+        cellTwo.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellTwo.setAttribute("id", "cellTwoX");
+        cellTwo.textContent = "X";
+      }  
+     
+    }
+    if(cellTwo.textContent === ""){
+      cellTwo.textContent = currentPlayer
+    }
+  });
+  cellThree.addEventListener("click", (e) => {
+    if (e.target.id === "col-2-0") {
+      if (currentPlayer === "O") {
+        cellThree.setAttribute("id", "cellThreeO");
+        cellThree.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellThree.setAttribute("id", "cellThreeX");
+        cellThree.textContent = "X";
+      } 
+    }
+    if(cellThree.textContent === ""){
+      cellThree.textContent = currentPlayer
+    }
+  });
+
+  cellFour.addEventListener("click", (e) => {
+    if (e.target.id === "col-0-1") {
+      if (currentPlayer === "O") {
+        cellFour.setAttribute("id", "cellFourO");
+        cellFour.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellFour.setAttribute("id", "cellFourX");
+        cellFour.textContent = "X";
+      } else {
+        cellFour.textContent = "";
+      }
+    }
+    if(cellFour.textContent === ""){
+      cellFour.textContent = currentPlayer
+    }
+  });
+
+  cellFive.addEventListener("click", (e) => {
+    if (e.target.id === "col-1-1") {
+      if (currentPlayer === "O") {
+        cellFive.setAttribute("id", "cellFiveO");
+        cellFive.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellFive.setAttribute("id", "cellFiveX");
+        cellFive.textContent = "X";
+      } else {
+        cellFive.textContent = "";
+      }
+    }
+  });
+
+  cellSix.addEventListener("click", (e) => {
+    if (e.target.id === "col-2-1") {
+      if (currentPlayer === "O") {
+        cellSix.setAttribute("id", "cellSixO");
+        cellSix.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellSix.setAttribute("id", "cellSixX");
+        cellSix.textContent = "X";
+      } else {
+        cellSix.textContent = "";
+      }
+    }
+  });
+
+  cellSeven.addEventListener("click", (e) => {
+    if (e.target.id === "col-0-2") {
+      if (currentPlayer === "O") {
+        cellSeven.setAttribute("id", "cellSevenO");
+        cellSeven.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellSeven.setAttribute("id", "cellSevenX");
+        cellSeven.textContent = "X";
+      } else {
+        cellSeven.textContent = "";
+      }
+    }
+  });
+
+  cellEight.addEventListener("click", (e) => {
+    if (e.target.id === "col-1-2") {
+      if (currentPlayer === "O") {
+        cellEight.setAttribute("id", "cellEightO");
+        cellEight.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellEight.setAttribute("id", "cellEightX");
+        cellEight.textContent = "X";
+      } else {
+        cellEight.textContent = "";
+      }
+    }
+  });
+
+  cellNine.addEventListener("click", (e) => {
+    if (e.target.id === "col-2-2") {
+      if (currentPlayer === "O") {
+        cellNine.setAttribute("id", "cellNineO");
+        cellNine.textContent = "O";
+      } else if (currentPlayer === "X") {
+        cellNine.setAttribute("id", "cellNineX");
+        cellNine.textContent = "X";
+      } else {
+        cellNine.textContent = "";
+      }
+    }
+  });
+
+  currentPlayerX.addEventListener("click", (e) => {
+    if (e.target.id === "currentPlayerX") {
+      if (currentPlayer === "O") {
+        const userMarkerX = prompt(
+          "Change Marker to X? x for yes o for no  Warning: This resets the game! "
+        );
+        if (userMarkerX === "x") {
+          currentPlayer = "X";
+          cellOne.textContent = "";
+          cellTwo.textContent = "";
+          cellThree.textContent = "";
+          cellFour.textContent = "";
+          cellFive.textContent = "";
+          cellSix.textContent = "";
+          cellSeven.textContent = "";
+          cellEight.textContent = "";
+          cellNine.textContent = "";
+          currentPlayerX.style.backgroundColor = "grey";
+          currentPlayerX.style.borderColor = "grey";
+          currentPlayerO.style.backgroundColor = "lightgrey";
+          currentPlayerO.style.borderColor = "lightgrey";
+        } else if (userMarkerX === "o") {
+          currentPlayer = "O";
+          cellOne.textContent = "";
+        } else {
+          userMarkerX === null;
+        }
+      } else if (currentPlayer === "") {
+        currentPlayer = "X";
+        currentPlayerX.style.backgroundColor = "grey";
+        currentPlayerX.style.borderColor = "grey";
+      }
+    }
+  });
+
+  currentPlayerO.addEventListener("click", (e) => {
+    if (e.target.id === "currentPlayerO") {
+      if (currentPlayer === "X") {
+        const userMarkerO = prompt(
+          "Change Marker to O from X? o for yes x for no Warning: This resets the game!"
+        );
+        if (userMarkerO === "o") {
+          currentPlayer = "O";
+          cellOne.textContent = "";
+          cellTwo.textContent = "";
+          cellThree.textContent = "";
+          cellFour.textContent = "";
+          cellFive.textContent = "";
+          cellSix.textContent = "";
+          cellSeven.textContent = "";
+          cellEight.textContent = "";
+          cellNine.textContent = "";
+          currentPlayerO.style.backgroundColor = "grey";
+          currentPlayerO.style.borderColor = "grey";
+          currentPlayerX.style.backgroundColor = "lightgrey";
+          currentPlayerX.style.backgroundColor = "lightgrey";
+        } else if (userMarkerO === "x") {
+          currentPlayer = "X";
+        } else {
+          userMarkerO === null;
+        }
+      } else if (currentPlayer === "") {
+        currentPlayer = "O";
+        currentPlayerO.style.backgroundColor = "grey";
+        currentPlayerO.style.borderColor = "grey";
+      }
+    }
+  });
+
+  cellIds.forEach((id) => {
+    const cells = document.getElementById(id);
+    cells.addEventListener("click", () => {
+
+      if (cellOne.textContent === "") {
+        cellTwo.textContent = currentPlayer;
+      }
+
+      if (
+        cellOne.textContent === "O" &&
+        cellTwo.textContent === "O" &&
+        cellThree.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent === "X" &&
+        cellTwo.textContent === "X" &&
+        cellThree.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellFour.textContent === "O" &&
+        cellFive.textContent === "O" &&
+        cellSix.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellFour.textContent === "X" &&
+        cellFive.textContent === "X" &&
+        cellSix.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellSeven.textContent === "O" &&
+        cellEight.textContent === "O" &&
+        cellNine.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellSeven.textContent === "X" &&
+        cellEight.textContent === "X" &&
+        cellNine.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Horizontally! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent === "O" &&
+        cellFour.textContent === "O" &&
+        cellSeven.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Vertically! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent === "X" &&
+        cellFour.textContent === "X" &&
+        cellSeven.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Vertically! You win ${currentPlayer}`;
+      } else if (
+        cellTwo.textContent === "O" &&
+        cellFive.textContent === "O" &&
+        cellEight.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Vertically! You win ${currentPlayer}`;
+      } else if (
+        cellThree.textContent === "X" &&
+        cellSix.textContent === "X" &&
+        cellNine.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Vertically! You win ${currentPlayer}`;
+      } else if (
+        cellThree.textContent === "O" &&
+        cellSix.textContent === "O" &&
+        cellNine.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Vertically! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent === "X" &&
+        cellFive.textContent === "X" &&
+        cellNine.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Diagonally! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent === "O" &&
+        cellFive.textContent === "O" &&
+        cellNine.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Diagonally! You win ${currentPlayer}`;
+      } else if (
+        cellSeven.textContent === "X" &&
+        cellFive.textContent === "X" &&
+        cellThree.textContent === "X"
+      ) {
+        displayEl.innerText = `3 X's Diagonally! You win ${currentPlayer}`;
+      } else if (
+        cellSeven.textContent === "O" &&
+        cellFive.textContent === "O" &&
+        cellThree.textContent === "O"
+      ) {
+        displayEl.innerText = `3 O's Diagonally! You win ${currentPlayer}`;
+      } else if (
+        cellOne.textContent !== "" &&
+        cellTwo.textContent !== "" &&
+        cellThree.textContent !== "" &&
+        cellFour.textContent !== "" &&
+        cellFive.textContent !== "" &&
+        cellSix.textContent !== "" &&
+        cellSeven.textContent !== "" &&
+        cellEight.textContent !== "" &&
+        cellNine.textContent !== ""
+      ) {
+        displayEl.innerText = "Looks like a tie!";
+      }
+    });
+  });
+
+  if (
+    cellOne.textContent === "" &&
+    cellTwo.textContent === "" &&
+    cellThree.textContent === "" &&
+    cellFour.textContent === "" &&
+    cellFour.textContent === "" &&
+    cellFive.textContent === "" &&
+    cellSix.textContent === "" &&
+    cellSeven.textContent === "" &&
+    cellEight.textContent === "" &&
+    cellNine.textContent === ""
+  ) {
+    displayEl.innerText = "Welcome to Tic-Tac-Toe!";
+  }
+}
+
+newGameBoard.gameGrid(3, 3);
+game();
