@@ -1,0 +1,379 @@
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+#mainContainer {
+  display: grid;
+  position: relative;
+  left: 18vh;
+  bottom: 3vh;
+  grid-template-columns: 1600px 200px 750px 00px;
+  grid-template-rows: 250px 100px 100px 300px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.currentPlayer {
+  background-color: red;
+}
+#background {
+  background-color: grey;
+  position: relative;
+  height: 85vh;
+  width: 113vh;
+  top: 16vh;
+  left: 11vh;
+}
+
+.startGame {
+  background-color: red;
+  border-style: solid;
+  border-color: red;
+  padding: 20px;
+  color: white;
+  position: relative;
+  right: 10vh;
+  bottom: 50vh;
+}
+
+#ready:hover {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
+#playerController {
+  display: flex;
+  padding: 60.5px;
+  grid-row: 2;
+  position: relative;
+  align-items: center;
+  left: vh;
+  top: 50vh;
+  width: 105.2vh;
+  font-size: 2em;
+  background-color: darkgrey;
+  font-family: "Press Start 2P", cursive;
+}
+
+#computerForm {
+  display: flex;
+  grid-column: 1/4;
+  gap: 25px;
+  grid-row: 4;
+  justify-content: center;
+  align-items: center;
+}
+
+#currentPlayerX {
+  background-color: lightgrey;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  padding: 25px;
+  height: 23.9vh;
+  align-items: center;
+  justify-content: center;
+  width: 26.73vh;
+  font-size: 5em;
+  position: relative;
+  top: 48.5vh;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+#currentPlayerX:hover {
+  background-color: darkgrey;
+  border-color: darkgrey;
+}
+
+#currentPlayerO:hover {
+  background-color: darkgrey;
+  border-color: darkgrey;
+}
+
+#currentPlayerO {
+  background-color: lightgrey;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  padding: 20px;
+  height: 23.9vh;
+  align-items: center;
+  justify-content: center;
+  width: 26.8vh;
+  font-size: 5em;
+  margin-bottom: 13vh;
+  position: relative;
+  right: 1.1vh;
+  top: 48.49vh;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+#gridContainer {
+  display: flex;
+  background-color: black;
+  width: 0px;
+  position: relative;
+  left: 17vh;
+  bottom: 53.5vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.rows {
+  height: 175px;
+  width: 175px;
+  flex-wrap: no-wrap;
+}
+
+.cell {
+  height: 175px;
+  width: 175px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#cellOneO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellOneX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellTwoO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellTwoX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellThreeO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellThreeX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellFourO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellFourX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellFiveO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellFiveX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellSixO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellSixX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellSevenO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellSevenX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellEightO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellEightX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellNineO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#cellNineX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: grey;
+}
+
+#nameRequired {
+  position: relative;
+  bottom: 0.8vh;
+  left: 0.4vh;
+  margin-left: 2.2rem;
+}
+
+#nameLabel {
+  position: relative;
+  left: 2vh;
+}
+
+#difficultyLabel {
+  position: relative;
+  right: 30.8vh;
+  top: 29vh;
+  font-size: 2em;
+}
+
+#difficultyContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100px 100px 300px;
+  grid-template-rows: px 100px 100px 100px 100px;
+}
+
+.difficultySlider {
+  display: flex;
+  background-color: darkgrey;
+  font-family: "Press Start 2P", cursive;
+  align-items: center;
+  height: 4vh;
+  grid-column: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 11.5vh;
+  left: 0.1vh;
+  position: relative;
+  color: white;
+  border-style: solid;
+  border-color: darkgrey;
+  font-size: 1.5em;
+  width: 59.5vh;
+}
+
+.difficultySlider:hover {
+  background-color: grey;
+}
+
+#displayEl {
+  position: relative;
+  background-color: darkgrey;
+  bottom: 7vh;
+  height: 0.5vh;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 16vh;
+  width: 50vh;
+  padding: 50px;
+}
+
+#footerContainer {
+  display: grid;
+  grid-template-columns: 1200px 200px 00px 300px;
+  grid-template-rows: 100px 100px 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+#copyright {
+  grid-row: 4;
+  grid-column: 1;
+  position: relative;
+  left: 56vh;
+  margin-top: 27vh;
+}
+
+#buttonContainer {
+  display: flex;
+  gap: 25px;
+}
+
+.easeOfUse {
+  background-color: darkgrey;
+  color: white;
+  position: relative;
+  right: 71.8vh;
+  top: 13vh;
+  font-family: "Press Start 2P", cursive;
+  padding: 20px;
+  border-style: solid;
+  border-color: darkgrey;
+}
+
+.easeOfUse:hover {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="module" src="vsComputer.js" defer></script>
+    <link rel="stylesheet" href="vsComputer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Bungee+Inline&family=Bungee+Shade&family=Cabin+Sketch&family=Montserrat+Subrayada&family=Oswald:wght@700&family=Piedra&family=Potta+One&family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vs Computer</title>
+  </head>
+
+  <body>
+
+    <div id="mainContainer">
+     
+    
+  
+    <form id="computerForm" method="get">
+      <div id="background">
+        <h1 id="playerController">Controller</h1>  
+      <label class="formContent" for="name" id="nameLabel"></label>
+      <button id="currentPlayerX" class="players" type="button">X</button>
+      <button id="currentPlayerO" class="players" type="button">O</button> 
+    
+      <div id="difficultyContainer">
+     
+          <div id="gridContainer"></div>
+          <div id="displayEl"></div>
+          <div id="difficultyContainer">
+        <button id="veryEasy" type="button" class="difficultySlider">Very Easy</button>
+      <button id="easy" type="button" class="difficultySlider">Easy</button>
+      <button id="normal" type="button" class="difficultySlider">Normal</button>
+      <button id="hard" type="button" class="difficultySlider">Hard</button>
+      <button id="veryHard" type="button" class="difficultySlider">Very Hard</button>
+      <button id="nearlyImpossible" type="button" class="difficultySlider">Nearly Impossible</button>
+    </div>  
+    </div>
+      </div>
+      <label for="difficulty" class="formContent" id="difficultyLabel"><span id="difficultyRequired" aria-label="required"></span>Difficulty</label>
+      <div id="buttonContainer">
+      <button type="button" class="easeOfUse" id="undo">Undo a Move</button>
+
+      </div>
+    </form>
+    </div>
+  </body>
+  <footer>
+    <div id="footerContainer">
+ 
+    <p id="copyright">&copy Jake Mealey 2023</p>
+  </footer>  
+      
+
+
+</html>
