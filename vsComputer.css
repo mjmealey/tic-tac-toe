@@ -7,8 +7,8 @@ body {
 #mainContainer {
   display: grid;
   position: relative;
-  left: 18vh;
-  bottom: 3vh;
+  left: 12vh;
+  bottom: 7vh;
   grid-template-columns: 1600px 200px 750px 00px;
   grid-template-rows: 250px 100px 100px 300px;
   font-family: "Press Start 2P", cursive;
@@ -50,7 +50,7 @@ body {
   align-items: center;
   left: vh;
   top: 50vh;
-  width: 105.2vh;
+  width: 104.42vh;
   font-size: 2em;
   background-color: darkgrey;
   font-family: "Press Start 2P", cursive;
@@ -73,7 +73,7 @@ body {
   height: 23.9vh;
   align-items: center;
   justify-content: center;
-  width: 26.73vh;
+  width: 26.75vh;
   font-size: 5em;
   position: relative;
   top: 48.5vh;
@@ -115,20 +115,20 @@ body {
   width: 0px;
   position: relative;
   left: 17vh;
-  bottom: 53.5vh;
+  bottom: 55vh;
   justify-content: center;
   align-items: center;
 }
 
 .rows {
-  height: 175px;
-  width: 175px;
+  height: 150px;
+  width: 150px;
   flex-wrap: no-wrap;
 }
 
 .cell {
-  height: 175px;
-  width: 175px;
+  height: 150px;
+  width: 150px;
   border: 1px solid black;
   background-color: white;
 }
@@ -319,7 +319,7 @@ body {
   border-style: solid;
   border-color: darkgrey;
   font-size: 1.5em;
-  width: 59.5vh;
+  width: 59.9vh;
 }
 
 .difficultySlider:hover {
@@ -329,7 +329,7 @@ body {
 #displayEl {
   position: relative;
   background-color: darkgrey;
-  bottom: 7vh;
+  bottom: 8vh;
   height: 0.5vh;
   font-family: "Press Start 2P", cursive;
   display: flex;
@@ -365,7 +365,7 @@ body {
   background-color: darkgrey;
   color: white;
   position: relative;
-  right: 71.8vh;
+  right: 76.5vh;
   top: 13vh;
   font-family: "Press Start 2P", cursive;
   padding: 20px;
@@ -377,3 +377,4 @@ body {
   background-color: lightgrey;
   border-color: lightgrey;
 }
+
